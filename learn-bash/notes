@@ -1,3 +1,7 @@
 10/05/2023
 What is Bash
-Bash is a shell; it allows is to enter commands and presents results as output 
+Bash is a shell; it allows is to enter commands and presents results as output
+-------------------
+11/05/2023
+Bash variables being with '$'
+Built in variables are written in all caps
