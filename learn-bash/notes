@@ -7,3 +7,6 @@ Bash variables being with '$'
 Built in variables are written in all caps
 echo Single quote print exact
 echo double quotes will print value of variable
+-------------------
+12/05/2023
+setting variable = $() captures the output of a command andsubstitue said output
