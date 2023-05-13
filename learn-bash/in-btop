@@ -1,0 +1,14 @@
+#!/bin/sh
+
+command=/usr/bin/bpytop
+
+if [ -f $command ]
+then 
+	echo "$command is available, let's run it..."
+else
+	echo "$command is NOT available, installing it..."
+	apt update && apt install -y bpytop
+
+fi
+
+$command
