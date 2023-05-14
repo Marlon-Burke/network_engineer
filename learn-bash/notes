@@ -10,3 +10,6 @@ echo double quotes will print value of variable
 -------------------
 12/05/2023
 setting variable = $() captures the output of a command andsubstitue said output
+-------------------
+13/05/2023 
+script exit-code2 is incorrect the exit code is beonging given for the echo statement $? must be checked before the first echo inorder to show the valid exit code for the test find command

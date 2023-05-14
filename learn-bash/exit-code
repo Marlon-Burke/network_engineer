@@ -1,0 +1,16 @@
+#!/bin/sh
+
+package=nonexist
+
+apt install -y $package >> package_instsll.log
+
+if [ $? -eq 0 ]
+then
+	echo "The installation of $package was successful."
+	echo "The new command is available here:"
+	which $package
+else 
+	echo "$package failed to install." >> package_failure.log
+
+fi
+
