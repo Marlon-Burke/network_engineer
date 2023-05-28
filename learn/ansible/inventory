@@ -1,3 +1,9 @@
-ubuntu-1@ubuntu-1
-ubuntu-2@ubuntu-2
+[web_servers]
+ubuntu-1@ubuntu-1 
+
+[db_servers]
+ubuntu-2@ubuntu-2 
 ubuntu-3@ubuntu-3
+
+[file_servers]
+fedora-1@fedora-1 
