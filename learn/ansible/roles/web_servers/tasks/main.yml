@@ -1,28 +1,18 @@
- - name: install httpd package (Fedora)
-   tags: apache,fedora,httpd
-   dnf:
+ - name: install web server packages
+   tags: apache,apache2,fedora,httpd,ubuntu
+   package:
      name:
-       - httpd
-       - php
+       - "Template:Apache package name"
+       - "Template:Php package name"
      state: latest
    when: ansible_distribution == "Fedora"
  
- - name: start and enable httpd (Fedora)
+ - name: start and enable apache
    tags: apache,fedora,httpd
    service:
-     name: httpd
+     name: "Template:Apache service"
      state: started
      enabled: yes
-   when: ansible_distribution == "Fedora"
- 
- - name: install apache2 package (Ubuntu)
-   tags: apache,apache2,ubuntu
-   apt:
-     name:
-       - apache2
-       - libapache2-mod-php
-     state: latest
-   when: ansible_distribution == "Ubuntu"
  
  - name: change e-mail address for admin
    tags: apache,fedora,httpd
@@ -31,14 +21,7 @@
      regexp: '^ServerAdmin'
      line: ServerAdmin somebody@somewhere.net
    when: ansible_distribution == "Fedora"
-   register: httpd
- 
- - name: restart httpd (CentOS)
-   tags: apache,fedora,httpd
-   service:
-     name: httpd
-     state: restarted
-   when: httpd.changed    
+   notify: restart_apache
  
  - name: copy html file for site
    tags: apache,apache,apache2,httpd
