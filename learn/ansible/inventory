@@ -11,4 +11,4 @@ fedora-1@fedora-1
 [workstations]
 192.168.0.19
 
-remote_user = samantha
+#remote_user = samantha
